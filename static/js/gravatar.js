@@ -37,21 +37,58 @@ var AddEvent = (function ()
 {
 	var $addButton, $player, $playerClone;
 
+	var $btnAdd, $btnCancel, $btnNew, $addForm;
+
 	$(init);
+
+	function renameInputs()
+	{
+		var i = 0;
+		$.each($("div[data-role='payer']"), function(i, v) {
+			var $v = $(v);
+			$v.find("select").attr("name", "payer_" + i);
+			$v.find("input").attr("name", "ammount_" + i);
+		});
+	}
 
 	function addRow(e)
 	{
 		var $p = $playerClone.clone();
 		$p.css({ "margin-left" : "140px" });
 		$p.insertBefore($(this).parent());
+
+
+		renameInputs();
 	}	
 
 	function init() {
 		$addButton = $("button[data-role='payer-add']");
+		$btnAdd = $("button[data-role='btn-add']");
+		$addForm = $("div[data-role='add-form']");
+		$btnCancel = $("button[data-role='btn-cancel']");
+		$btnNew = $("button[data-role='btn-new']");
+
 		$player = $("div[data-role='payer']:first")
 		$playerClone = $player.clone();
 
 		$addButton.click(addRow);
+
+		$btnNew.click(function (){
+			$btnAdd.show();
+			$btnCancel.show();
+			$btnNew.hide();
+			$addForm.slideDown();
+			return false;
+		});
+		$btnCancel.click(function (){
+			$btnAdd.hide();
+			$btnCancel.hide();
+			$btnNew.show();
+			$addForm.slideUp();
+			return false;
+		});
+
+		renameInputs();
 	}
 
 	return {

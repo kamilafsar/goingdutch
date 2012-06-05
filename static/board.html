@@ -78,6 +78,7 @@
         <div class="span8">
           <form class="form-horizontal">
           <fieldset>
+            <div data-role="add-form" style="display:none;">
           <div class="control-group">
             <label class="control-label" for="appendedInputButton">Describe the bill</label>
             <div class="controls">
@@ -108,9 +109,11 @@
             </div>
             </div>
           </div>
+        </div>
           <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Save changes</button>
-            <button class="btn">Cancel</button>
+            <button data-role="btn-add" type="submit" class="btn btn-primary" style="display:none;">Save changes</button>
+            <button data-role="btn-new" class="btn btn-primary">Add new</button>
+            <button data-role="btn-cancel" class="btn" style="display:none">Cancel</button>
           </div>
         </fieldset>
       </form>
