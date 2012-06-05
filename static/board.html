@@ -82,7 +82,7 @@
           <div class="control-group">
             <label class="control-label" for="appendedInputButton">Describe the bill</label>
             <div class="controls">
-              <input class="input-large" type="text" placeholder="">
+              <input class="input-large" type="text" name="description" placeholder="">
             </div>
           </div>
           <div class="control-group">
@@ -99,7 +99,7 @@
                 </select>
                 </div>
                 <div class="input-prepend span3" style="float:left;">
-                  <span class="add-on">&euro;</span><input class="span2" id="prependedInput" size="16" type="text">
+                  <span class="add-on">&euro;</span><input class="span2" id="prependedInput" size="16" type="number" min="0">
                 </div>
               </div>
               <div type="clear:both;margin-top:20px;" class="controls docs-input-sizes">
@@ -107,6 +107,13 @@
               <button class="btn" type="button" data-role="payer-add">Add More</button>
               <p class="help-block">Click <code>add more</code> to add more then one person that picked up the bill.</p>
             </div>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="appendedInputButton">Who was present?</label>
+            <div class="controls">
+              <textarea rows="4" name="participants" class="input-xlarge" type="text" placeholder="leave me blank to assume everyone!"></textarea>
+              <p class="help-block">Separate using either <code>Enters</code> or <code>Comma's</code></p>
             </div>
           </div>
         </div>

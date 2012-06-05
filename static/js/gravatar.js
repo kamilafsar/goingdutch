@@ -47,7 +47,7 @@ var AddEvent = (function ()
 		$.each($("div[data-role='payer']"), function(i, v) {
 			var $v = $(v);
 			$v.find("select").attr("name", "payer_" + i);
-			$v.find("input").attr("name", "ammount_" + i);
+			$v.find("input").attr("name", "amount_" + i);
 		});
 	}
 
