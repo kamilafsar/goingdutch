@@ -18,7 +18,11 @@ case class User(id: Pk[Long], token: String, email: String, name: Option[String]
 case class Event(id: Pk[Long], name: String, owner_id: Long, token: String, isDone: Boolean)
 
 case class Payment(id: Pk[Long], event_id: Long, payer_id: Long, forWho: String, amount: Double,
-                   creationDate: Date, description: String)
+                   creationDate: Date, description: String) {
+
+  lazy val forWhoIds = forWho.split(",").map(_.trim.toLong)
+
+}
 
 object Event extends Magic[Event] {
 
@@ -45,7 +49,17 @@ object Event extends Magic[Event] {
   def byToken(token: String): Event =
     find("token = {t}").on("t" -> token).single()
 
-
+  def byUserToken(token: String): Event = {
+    SQL(
+      """
+        select e.* from `User` u
+        inner join EventUser eu on eu.user_id = u.id
+        inner join `Event` e on eu.event_id = e.id
+        where u.token = {uToken} and !e.isDone
+        order by id desc
+        limit 1
+      """).on("uToken" -> token).as(Event)
+  }
 }
 
 object User extends Magic[User] {
@@ -69,7 +83,8 @@ object User extends Magic[User] {
     ).as(User *)
   }
 
-
+  def byToken(token: String): User =
+    find("token = {t}").on("t" -> token).single()
 }
 
 object Payment extends Magic[Payment] {
@@ -86,6 +101,5 @@ object Payment extends Magic[Payment] {
       x => ()
     )
   }
-
 
 }

@@ -1,0 +1,14 @@
+@(event: dal.Event, token: String)
+
+
+<h1>invitation for @event.name</h1>
+
+<form method="post" action="/invitation-accepted">
+
+  <input type="hidden" name="token" value="@token"/>
+  name: <input type="text" name="name" />
+
+
+  <button>go</button>
+
+</form>

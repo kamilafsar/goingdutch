@@ -17,7 +17,7 @@
 
 <ul>
 @payments.map { payment =>
-    <li>@userName(payment.payer_id) @payment.description, € @payment.amount</li>
+    <li>@userName(payment.payer_id) @payment.description, € @payment.amount, @payment.forWhoIds.map(userName(_)).mkString(", ")</li>
 }
 </ul>
 

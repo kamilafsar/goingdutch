@@ -7,6 +7,8 @@ GET     /                                       Application.index
 POST     /                                      Application.start
 GET     /board/{name}/{token}                   Application.board
 POST     /create-payment                        Application.createPayment
+GET   /invitation                               Application.invitation
+POST /invitation-accepted                       Application.invitationAccepted
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
