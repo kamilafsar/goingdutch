@@ -5,7 +5,106 @@
     user.username
 }
 
+@round(amount: BigDecimal) = @{
+  String.format("%3.2f", amount.toDouble.asInstanceOf[Object])
+}
+
 @main("board") {
+
+<div class="page-header">
+  <h1>@event.name <small>@payments.size transactions, total spent &euro;@round(payments.map(p => p.amount).reduceLeft(_+_))</small></h1>
+</div>
+
+<!-- Example row of columns -->
+<div class="row">
+  <div class="span8">
+    <form class="form-horizontal" action="/create-payment" method="post">
+      <fieldset>
+        <div data-role="add-form" style="display:none;">
+          <div class="control-group">
+            <label class="control-label" for="appendedInputButton">Describe the bill</label>
+            <div class="controls">
+              <input class="input-large" type="text" name="description" placeholder="">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Who Paid?</label>
+            <div class="">
+              <div data-role="payer" class="">
+                <div class="span3">
+                  <select name="person_1" style="float left">
+                    @participants.map { user =>
+                      <option value="@user._1.id()">@user._1.username</option>
+                    }
+                  </select>
+                </div>
+                <div class="input-prepend span3" style="float:left;">
+                  <span class="add-on">&euro;</span><input class="span2" id="prependedInput" size="16" type="number" min="0">
+                </div>
+              </div>
+              <div type="clear:both;margin-top:20px;" class="controls docs-input-sizes">
+
+                <button class="btn" type="button" data-role="payer-add">Add More</button>
+                <p class="help-block">Click <code>add more</code> to add more then one person that picked up the bill.</p>
+              </div>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="appendedInputButton">Who was present?</label>
+            <div class="controls">
+              @participants.map { user =>
+              <label class="span3"><input type="checkbox" name="participant" value="@user._1.id()" checked="checked"/> @user._1.username</label>
+              }
+            </div>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button data-role="btn-add" type="submit" class="btn btn-primary" style="display:none;">Save changes</button>
+          <button data-role="btn-new" class="btn btn-primary">Add new</button>
+          <button data-role="btn-cancel" class="btn" style="display:none">Cancel</button>
+        </div>
+      </fieldset>
+    </form>
+
+    <hr />
+    <ul class="nav nav-tabs nav-stacked">
+      <li class="nav-header">
+        Bills already picked up.
+      </li>
+      @payments.map { payment =>
+
+      <li>
+        <a name="" style="color:black">On <b>@payment.getDayName</b> &euro; @round(payment.amount) was picked up by <b>@userName(payment.payer_id)</b> <br/>
+          @payment.description</a>
+        <!-- @payment.forWhoIds.map(userName(_)).mkString(", ") -->
+      </li>
+      }
+
+
+  </div>
+
+  <div class="span4">
+    <ul class="nav nav-tabs nav-stacked">
+      <li class="nav-header">
+        Leaderboard
+      </li>
+      @participants.map { balance =>
+        <li>
+          <a href="#">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-role="gravatar" data-email="@balance._1.email" />
+            @balance._1.username
+            <span class="label @if(balance._2 < 0) { label-important } else { label-success }">&euro;@round(balance._2)</span>
+          </a>
+        </li>
+      }
+    </ul>
+
+  </div>
+</div>
+<hr>
+
+
+<!--
 <h1>board - @event.name</h1>
 
     <h2>balance</h2>
@@ -16,9 +115,7 @@
 <h2>payments</h2>
 
 <ul>
-@payments.map { payment =>
-    <li>@userName(payment.payer_id) @payment.description, € @payment.amount, @payment.forWhoIds.map(userName(_)).mkString(", ")</li>
-}
+
 </ul>
 
 <h2>transactions</h2>
@@ -65,4 +162,8 @@
 
   <button>do payment</button>
 </form>
+-->
+
+
+
 }

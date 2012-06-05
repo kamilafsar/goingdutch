@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d5207bc-3533-484f-b61a-7a43ac0ca981" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/algorithms.scala" afterPath="$PROJECT_DIR$/app/algorithms.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers.scala" afterPath="$PROJECT_DIR$/app/controllers.scala" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/stylesheets/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/board.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/index.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/css/bootstrap-responsive.css" afterPath="$PROJECT_DIR$/public/stylesheets/bootstrap-responsive.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/css/bootstrap-responsive.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/bootstrap-responsive.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/css/bootstrap.css" afterPath="$PROJECT_DIR$/public/stylesheets/bootstrap.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/stylesheets/bootstrap.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/glyphicons-halflings-white.png" afterPath="$PROJECT_DIR$/public/img/glyphicons-halflings-white.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/glyphicons-halflings.png" afterPath="$PROJECT_DIR$/public/img/glyphicons-halflings.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/bootstrap.js" afterPath="$PROJECT_DIR$/public/javascripts/bootstrap.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/javascripts/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/gravatar.js" afterPath="$PROJECT_DIR$/public/javascripts/gravatar.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models.scala" afterPath="$PROJECT_DIR$/app/models.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Application/board.scala.html" afterPath="$PROJECT_DIR$/app/views/Application/board.scala.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.scala.html" afterPath="$PROJECT_DIR$/app/views/main.scala.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goingdutch.iws" afterPath="$PROJECT_DIR$/goingdutch.iws" />
     </list>
     <ignored path="goingdutch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,21 +76,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers.scala">
+      <file leaf-file-name="board.scala.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/Application/board.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="10" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#21#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Anorm.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///Library/Play/play-1.2.4/modules/scala-0.9.1/src/play/db/anorm/Anorm.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="410" column="12" selection-start="16514" selection-end="16514" vertical-scroll-proportion="0.0">
+            <state line="76" column="64" selection-start="3136" selection-end="3136" vertical-scroll-proportion="0.35714287">
               <folding />
             </state>
           </provider>
@@ -86,37 +88,10 @@
       <file leaf-file-name="models.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="3" selection-start="2142" selection-end="2142" vertical-scroll-proportion="0.0">
+            <state line="31" column="25" selection-start="993" selection-end="993" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#13#35#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="algorithms.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/algorithms.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="21" selection-start="149" selection-end="149" vertical-scroll-proportion="0.16415869">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="invitation.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/Application/invitation.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="48" selection-start="244" selection-end="244" vertical-scroll-proportion="-8.461538">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="board.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/Application/board.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="98" selection-start="757" selection-end="757" vertical-scroll-proportion="9.538462">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -130,10 +105,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.conf" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conf/application.conf">
+      <file leaf-file-name="controllers.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="179" column="0" selection-start="5371" selection-end="5371" vertical-scroll-proportion="0.0">
+            <state line="9" column="7" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#21#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gravatar.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/gravatar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="46" selection-start="5204" selection-end="5204" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -152,15 +138,16 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/main.scala.html" />
         <option value="$PROJECT_DIR$/app/views/Application/index.scala.html" />
         <option value="$PROJECT_DIR$/app/views/Application/invitation.scala.html" />
         <option value="$PROJECT_DIR$/conf/routes" />
         <option value="$PROJECT_DIR$/conf/application.conf" />
-        <option value="$PROJECT_DIR$/app/models.scala" />
         <option value="$PROJECT_DIR$/app/controllers.scala" />
-        <option value="$PROJECT_DIR$/app/views/Application/board.scala.html" />
         <option value="$PROJECT_DIR$/app/algorithms.scala" />
+        <option value="$PROJECT_DIR$/app/views/main.scala.html" />
+        <option value="$PROJECT_DIR$/public/javascripts/gravatar.js" />
+        <option value="$PROJECT_DIR$/app/models.scala" />
+        <option value="$PROJECT_DIR$/app/views/Application/board.scala.html" />
       </list>
     </option>
   </component>
@@ -255,6 +242,10 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -275,6 +266,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="goingdutch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="goingdutch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="goingdutch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -335,6 +344,10 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -352,10 +365,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="algorithms.scala" />
-              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -424,6 +433,13 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/public/javascripts" />
+      <recent name="$PROJECT_DIR$/public/stylesheets" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -639,13 +655,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/main.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="60" selection-start="348" selection-end="348" vertical-scroll-proportion="-6.1538463">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Play/play-1.2.4/modules/scala-0.9.1/samples-and-tests/just-test-cases/app/models/User.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="7" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0">
@@ -676,21 +685,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/application.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="0" selection-start="5371" selection-end="5371" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/routes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="60" selection-start="506" selection-end="524" vertical-scroll-proportion="0.0">
+        <state line="179" column="0" selection-start="5371" selection-end="5371" vertical-scroll-proportion="0.3559097">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/Application/invitation.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="48" selection-start="244" selection-end="244" vertical-scroll-proportion="-8.461538">
+        <state line="11" column="48" selection-start="244" selection-end="244" vertical-scroll-proportion="0.30261347">
           <folding />
         </state>
       </provider>
@@ -702,9 +704,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/algorithms.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="21" selection-start="149" selection-end="149" vertical-scroll-proportion="0.15936255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="16" selection-start="2053" selection-end="2053" vertical-scroll-proportion="0.6973865">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/gravatar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="46" selection-start="5204" selection-end="5204" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/routes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="60" selection-start="506" selection-end="524" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="7" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#21#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="3" selection-start="2142" selection-end="2142" vertical-scroll-proportion="0.0">
+        <state line="31" column="25" selection-start="993" selection-end="993" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#13#35#0" expanded="true" />
           </folding>
@@ -713,23 +752,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/Application/board.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="98" selection-start="757" selection-end="757" vertical-scroll-proportion="9.538462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="10" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#21#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/algorithms.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="21" selection-start="149" selection-end="149" vertical-scroll-proportion="0.16415869">
+        <state line="76" column="64" selection-start="3136" selection-end="3136" vertical-scroll-proportion="0.35714287">
           <folding />
         </state>
       </provider>

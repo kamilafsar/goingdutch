@@ -17,8 +17,8 @@ var Gravatar = (function() {
 		var $this = $(v);
 
 		var email = $this.attr("data-email");
-		//var url = getGravatarUrl(email);
-		//$this.attr("src", url);
+		var url = getGravatarUrl(email);
+		$this.attr("src", url);
 
 	}
 

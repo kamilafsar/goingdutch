@@ -24,6 +24,20 @@ case class Payment(id: Pk[Long], event_id: Long, payer_id: Long, forWho: String,
 
   lazy val forWhoIds = forWho.split(",").map(_.trim.toLong)
 
+  def getDayName() = {
+    val calandar = Calendar.getInstance()
+    calandar.setTime(creationDate)
+    calandar.get(Calendar.DAY_OF_WEEK) match {
+      case 1 => "Monday"
+      case 2 => "TuesdayX"
+      case 3 => "Wednesday"
+      case 4 => "Thursday"
+      case 5 => "Friday"
+      case 6 => "Saturday"
+      case 7 => "Sunday"
+    }
+  }
+
 }
 
 object Event extends Magic[Event] {
