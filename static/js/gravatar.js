@@ -17,8 +17,8 @@ var Gravatar = (function() {
 		var $this = $(v);
 
 		var email = $this.attr("data-email");
-		var url = getGravatarUrl(email);
-		$this.attr("src", url);
+		//var url = getGravatarUrl(email);
+		//$this.attr("src", url);
 
 	}
 
@@ -32,3 +32,32 @@ var Gravatar = (function() {
 
 	};
 })();
+
+var AddEvent = (function ()
+{
+	var $addButton, $player, $playerClone;
+
+	$(init);
+
+	function addRow(e)
+	{
+		var $p = $playerClone.clone();
+		$p.css({ "margin-left" : "140px" });
+		$p.insertBefore($(this).parent());
+	}	
+
+	function init() {
+		$addButton = $("button[data-role='payer-add']");
+		$player = $("div[data-role='payer']:first")
+		$playerClone = $player.clone();
+
+		$addButton.click(addRow);
+	}
+
+	return {
+
+	}
+})();
+
+
+
