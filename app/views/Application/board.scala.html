@@ -1,0 +1,61 @@
+@(event: dal.Event, participants: Seq[(dal.User, BigDecimal)], payments: Seq[dal.Payment])
+
+@userName(userId: Long) = @{
+    val user = participants.find(p => p._1.id() == userId).get._1
+    user.name.getOrElse(user.email)
+}
+
+@main("board") {
+<h1>board - @event.name</h1>
+
+    <h2>balance</h2>
+    @participants.map { balance =>
+      @balance._1.name.getOrElse(balance._1.email)  € @balance._2 </br>
+    }
+
+<h2>payments</h2>
+
+<ul>
+@payments.map { payment =>
+    <li>@userName(payment.payer_id) @payment.description, € @payment.amount</li>
+}
+</ul>
+
+
+<h2>add payment</h2>
+
+
+<form method="post" action="/create-payment">
+  <h2>payment</h2>
+  description:<input type="text" name="description" />
+  <br/>
+  participants:
+  <select name="participant">
+    <option value="11">kamil</option>
+  </select>
+  <br/>
+  <select name="participant">
+    <option value="12">jaap</option>
+  </select>
+  <br/>
+  <select name="participant">
+    <option value="13">martijn</option>
+  </select>
+  <br/>
+  payer:
+  <select name="payer_1">
+    <option value="11">kamil</option>
+  </select>
+  <br/>
+  amount:<input type="text" name="amount_1" /><br/>
+  <br/>
+  <select name="payer_2">
+    <option value="12">jaap</option>
+  </select>
+  <br/>
+  amount:<input type="text" name="amount_2" /><br/>
+  <br/>
+
+  <button>do payment</button>
+</form>
+}
