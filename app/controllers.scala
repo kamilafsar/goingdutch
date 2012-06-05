@@ -1,7 +1,6 @@
 package controllers
 
-import algorithms.Algorithms
-import dal.{Payment, Event, User}
+import dal._
 import play._
 import libs.{Mail, Time}
 import play.mvc._
@@ -44,8 +43,9 @@ object Application extends Controller {
     val event = Event.byToken(token)
     val participants = User.allForEvent(event.id())
     val payments = Payment.allForEvent(event.id())
+    val transactions = Algorithms.makeMatch(participants, payments)
 
-    html.board(event, Algorithms.makeUpBalance(participants, payments), payments)
+    html.board(event, Algorithms.getSortedUserBalances(participants, payments), payments, transactions)
   }
 
 

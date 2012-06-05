@@ -1,8 +1,8 @@
-@(event: dal.Event, participants: Seq[(dal.User, BigDecimal)], payments: Seq[dal.Payment])
+@(event: dal.Event, participants: Seq[(dal.User, BigDecimal)], payments: Seq[dal.Payment], transactions: Seq[dal.Transaction])
 
 @userName(userId: Long) = @{
     val user = participants.find(p => p._1.id() == userId).get._1
-    user.name.getOrElse(user.email)
+    user.username
 }
 
 @main("board") {
@@ -10,7 +10,7 @@
 
     <h2>balance</h2>
     @participants.map { balance =>
-      @balance._1.name.getOrElse(balance._1.email)  € @balance._2 </br>
+      @balance._1.username  € @balance._2 </br>
     }
 
 <h2>payments</h2>
@@ -19,6 +19,13 @@
 @payments.map { payment =>
     <li>@userName(payment.payer_id) @payment.description, € @payment.amount, @payment.forWhoIds.map(userName(_)).mkString(", ")</li>
 }
+</ul>
+
+<h2>transactions</h2>
+<ul>
+  @transactions.map { transaction =>
+  <li>@transaction.from.username moet betalen aan @transaction.to.username, zoveel: € @transaction.amount</li>
+  }
 </ul>
 
 

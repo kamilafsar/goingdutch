@@ -13,6 +13,8 @@ case class User(id: Pk[Long], token: String, email: String, name: Option[String]
 
   def isActive = name.isDefined
 
+  def username = name.getOrElse(email)
+
 }
 
 case class Event(id: Pk[Long], name: String, owner_id: Long, token: String, isDone: Boolean)
