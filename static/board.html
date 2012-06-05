@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .xlarge {
+        font-size: 18px;
+      }
+      .help-block {
+        font-size:12px;
+
+      }
+      .controls {
+        padding-bottom:20px;
+      }
+
+      .badge {
+        font-size:18px;
+        display: inline-block;
+        margin-left:-40px;
+        margin-top:20px;
+
+      }
+    </style>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Going Dutch!</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+  
+    <div class="container">
+      <div class="page-header">
+          <h1>My Event <small>2 transactions, total spent &euro;180,90</small></h1>
+      </div>
+      
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span8">
+          <form class="form-horizontal">
+          <fieldset>
+            <div data-role="add-form" style="display:none;">
+          <div class="control-group">
+            <label class="control-label" for="appendedInputButton">Describe the bill</label>
+            <div class="controls">
+              <input class="input-large" type="text" name="description" placeholder="">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Who Paid?</label>
+            <div class="">
+              <div data-role="payer" class="">
+                <div class="span3">
+                <select name="person_1" style="float left">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+                </div>
+                <div class="input-prepend span3" style="float:left;">
+                  <span class="add-on">&euro;</span><input class="span2" id="prependedInput" size="16" type="number" min="0">
+                </div>
+              </div>
+              <div type="clear:both;margin-top:20px;" class="controls docs-input-sizes">
+
+              <button class="btn" type="button" data-role="payer-add">Add More</button>
+              <p class="help-block">Click <code>add more</code> to add more then one person that picked up the bill.</p>
+            </div>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="appendedInputButton">Who was present?</label>
+            <div class="controls">
+              <textarea rows="4" name="participants" class="input-xlarge" type="text" placeholder="leave me blank to assume everyone!"></textarea>
+              <p class="help-block">Separate using either <code>Enters</code> or <code>Comma's</code></p>
+            </div>
+          </div>
+        </div>
+          <div class="form-actions">
+            <button data-role="btn-add" type="submit" class="btn btn-primary" style="display:none;">Save changes</button>
+            <button data-role="btn-new" class="btn btn-primary">Add new</button>
+            <button data-role="btn-cancel" class="btn" style="display:none">Cancel</button>
+          </div>
+        </fieldset>
+      </form>
+
+          <hr />
+          <ul class="nav nav-tabs nav-stacked">
+           <li class="nav-header">
+            Bills already picked up.
+          </li>
+          <li>
+            <a name="" style="color:black">On <b>Tuesday</b> &euro; 40.50 was picked up by <b>Jaap taal</b> <br/>
+              DESCRIPTION HERE</a>
+          </li>
+
+
+        </div>
+        
+        <div class="span4">
+          <ul class="nav nav-tabs nav-stacked">
+           <li class="nav-header">
+            Leaderboard
+          </li>
+          <li>
+            <a href="#">
+             <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-role="gravatar" data-email="martijnl@q42.nl" />
+              Martijn Laarman
+              <span class="label label-success">&euro;40,5</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-role="gravatar" data-email="jaap@q42.nl" />
+                Jaap Taal
+                <span class="label label-success">&euro;40,5</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+             <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-role="gravatar" data-email="kamil@q42.nl" />
+              Kamil Afsar
+              <span class="label label-important">&euro;-81</span>
+            </a>
+          </li>
+        </ul>
+                     
+      </div>
+</div>
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/gravatar.js"></script>
+    
+
+  </body>
+</html>
